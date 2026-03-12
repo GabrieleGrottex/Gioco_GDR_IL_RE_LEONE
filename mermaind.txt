@@ -1,0 +1,58 @@
+classDiagram
+    class Personaggio {
+        <<abstract>>
+        #String nome
+        #int hp
+        #int forza
+        +eseguiAzione()* void
+    }
+
+    class Giocatore {
+        -int karma
+        +modificaKarma(int valore)
+        +getKarma() int
+        +eseguiAzione() void
+    }
+
+    class GraficaGDR {
+        -GestioneStoria storia
+        -GestioneSalvataggio salvataggio
+        -Giocatore giocatore
+        +aggiornaInterfaccia() void
+        -configuraBottoni(List choices) void
+    }
+
+    class GestioneStoria {
+        -Map scene
+        -int idScenaCorrente
+        +inizializza() void
+        +getScenaAttuale() NodoScena
+        +procedi(int id) void
+    }
+
+    class NodoScena {
+        -String testoNarrativo
+        -String pathImmagine
+        -List opzioni
+        +aggiungiScelta(String testo, int dest, int karma) void
+    }
+
+    class StatoGioco {
+        <<serializable>>
+        +String nomeGiocatore
+        +int idScenaCorrente
+        +int karma
+    }
+
+    class GestioneSalvataggio {
+        +salvaBinario(StatoGioco s) void
+        +caricaBinario() StatoGioco
+        +esportaCSV(Giocatore g) void
+    }
+
+    Personaggio <|-- Giocatore
+    GraficaGDR --> GestioneStoria
+    GraficaGDR --> GestioneSalvataggio
+    GraficaGDR --> Giocatore
+    GestioneStoria "1" *-- "many" NodoScena
+    GestioneSalvataggio ..> StatoGioco : serializza

@@ -8,6 +8,13 @@ package progetto_gdr;
  *
  * @author grott
  */
-public class Nemico {
-    
+public class Nemico extends Personaggio {
+    public Nemico(String nome, int hp, int forza) {
+        super(nome, hp, forza);
+    }
+
+    @Override
+    public void eseguiAzione() {
+        System.out.println(nome + " attacca ferocemente!");
+    }
 }

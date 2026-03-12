@@ -4,10 +4,21 @@
  */
 package progetto_gdr;
 
+import java.io.Serializable;
 /**
  *
  * @author grott
  */
-public class Personaggio {
-    
+abstract class Personaggio implements Serializable {
+    protected String nome;
+    protected int hp;
+    protected int forza;
+
+    public Personaggio(String nome, int hp, int forza) {
+        this.nome = nome;
+        this.hp = hp;
+        this.forza = forza;
+    }
+
+    public abstract void eseguiAzione();
 }

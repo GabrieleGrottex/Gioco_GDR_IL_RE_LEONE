@@ -28,18 +28,59 @@ public class GraficaGDR extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        btnScelta2 = new javax.swing.JButton();
+        btnScelta = new javax.swing.JButton();
+        btnScelta1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtRacconto = new javax.swing.JTextArea();
+        Sfondo = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
+
+        jLabel1.setText("jLabel1");
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
+
+        btnScelta2.setText("jButton3");
+        getContentPane().add(btnScelta2);
+        btnScelta2.setBounds(290, 260, 75, 23);
+
+        btnScelta.setText("jButton1");
+        getContentPane().add(btnScelta);
+        btnScelta.setBounds(10, 260, 75, 23);
+
+        btnScelta1.setText("jButton2");
+        getContentPane().add(btnScelta1);
+        btnScelta1.setBounds(150, 260, 75, 23);
+
+        txtRacconto.setColumns(20);
+        txtRacconto.setLineWrap(true);
+        txtRacconto.setRows(5);
+        jScrollPane1.setViewportView(txtRacconto);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(0, 190, 400, 50);
+
+        Sfondo.setText("jLabel2");
+        getContentPane().add(Sfondo);
+        Sfondo.setBounds(0, 0, 400, 300);
+
+        jButton4.setText("jButton4");
+        getContentPane().add(jButton4);
+        jButton4.setBounds(320, 10, 75, 23);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -70,5 +111,14 @@ public class GraficaGDR extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Sfondo;
+    private javax.swing.JButton btnScelta;
+    private javax.swing.JButton btnScelta1;
+    private javax.swing.JButton btnScelta2;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea txtRacconto;
     // End of variables declaration//GEN-END:variables
 }

@@ -23,7 +23,6 @@ public class StatoGioco implements Serializable {
 
     public StatoGioco(Giocatore g, int idScena) {
         this.nomeGiocatore = g.nome;
-        this.hp = g.hp;
         this.karma = g.getKarma();
         this.idScenaCorrente = idScena;
         this.decisioniPrese = new ArrayList<>();

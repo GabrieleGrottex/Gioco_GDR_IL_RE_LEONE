@@ -30,13 +30,13 @@ public class GraficaGDR extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        btnSalvataggio = new javax.swing.JButton();
         btnScelta2 = new javax.swing.JButton();
         btnScelta = new javax.swing.JButton();
         btnScelta1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtRacconto = new javax.swing.JTextArea();
         Sfondo = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -53,6 +53,10 @@ public class GraficaGDR extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
+
+        btnSalvataggio.setText("Button4");
+        getContentPane().add(btnSalvataggio);
+        btnSalvataggio.setBounds(330, 10, 72, 23);
 
         btnScelta2.setText("jButton3");
         getContentPane().add(btnScelta2);
@@ -76,11 +80,7 @@ public class GraficaGDR extends javax.swing.JFrame {
 
         Sfondo.setText("jLabel2");
         getContentPane().add(Sfondo);
-        Sfondo.setBounds(0, 0, 400, 300);
-
-        jButton4.setText("jButton4");
-        getContentPane().add(jButton4);
-        jButton4.setBounds(320, 10, 75, 23);
+        Sfondo.setBounds(0, 0, 420, 310);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -112,10 +112,10 @@ public class GraficaGDR extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Sfondo;
+    private javax.swing.JButton btnSalvataggio;
     private javax.swing.JButton btnScelta;
     private javax.swing.JButton btnScelta1;
     private javax.swing.JButton btnScelta2;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;

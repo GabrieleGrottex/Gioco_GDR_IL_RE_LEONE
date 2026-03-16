@@ -26,7 +26,13 @@ public class NodoScena {
         opzioni.add(new Scelta(testo, destinazione, karma));
     }
 
-    public String getTestoNarrativo() { return testoNarrativo; }
-    public String getPathImmagine() { return pathImmagine; }
-    public List<Scelta> getOpzioni() { return opzioni; }
+    public String getTestoNarrativo() { 
+        return testoNarrativo; 
+    }
+    public String getPathImmagine() { 
+        return pathImmagine; 
+    }
+    public List<Scelta> getOpzioni() { 
+        return opzioni; 
+    }
 }

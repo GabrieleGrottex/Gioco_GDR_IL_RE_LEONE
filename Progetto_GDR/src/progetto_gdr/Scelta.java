@@ -4,9 +4,6 @@
  */
 package progetto_gdr;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  *
  * @author grott

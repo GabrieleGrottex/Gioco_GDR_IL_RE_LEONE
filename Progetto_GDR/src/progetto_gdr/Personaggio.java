@@ -10,15 +10,9 @@ import java.io.Serializable;
  * @author grott
  */
 abstract class Personaggio implements Serializable {
-    protected String nome;
-    protected int hp;
-    protected int forza;
+    public String nome;
 
-    public Personaggio(String nome, int hp, int forza) {
+    public Personaggio(String nome) {
         this.nome = nome;
-        this.hp = hp;
-        this.forza = forza;
     }
-
-    public abstract void eseguiAzione();
 }

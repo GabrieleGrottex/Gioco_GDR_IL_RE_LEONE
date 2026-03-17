@@ -11,12 +11,44 @@ package progetto_gdr;
 public class GraficaGDR extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(GraficaGDR.class.getName());
-
+    private GestoreStoria motore;
     /**
      * Creates new form GraficaGDR
      */
     public GraficaGDR() {
-        initComponents();
+         initComponents();
+        motore = new GestoreStoria(); 
+        aggiornaInterfaccia();        
+    }
+    
+    private void aggiornaInterfaccia() {
+        NodoScena attuale = motore.getScenaAttuale();
+
+        txtRacconto.setText(attuale.getTestoNarrativo());
+
+        try {
+            Sfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/progetto_gdr/immagini/" + attuale.getPathImmagine())));
+        } catch (Exception e) {
+            System.out.println("Immagine non trovata: " + attuale.getPathImmagine());
+        }
+
+        btnScelta.setVisible(false);
+        btnScelta1.setVisible(false);
+        btnScelta2.setVisible(false);
+
+        var opzioni = attuale.getOpzioni();
+        if (opzioni.size() > 0) {
+            btnScelta.setText(opzioni.get(0).testo);
+            btnScelta.setVisible(true);
+        }
+        if (opzioni.size() > 1) {
+            btnScelta1.setText(opzioni.get(1).testo);
+            btnScelta1.setVisible(true);
+        }
+        if (opzioni.size() > 2) {
+            btnScelta2.setText(opzioni.get(2).testo);
+            btnScelta2.setVisible(true);
+        }
     }
 
     /**
@@ -55,18 +87,22 @@ public class GraficaGDR extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         btnSalvataggio.setText("Button4");
+        btnSalvataggio.addActionListener(this::btnSalvataggioActionPerformed);
         getContentPane().add(btnSalvataggio);
         btnSalvataggio.setBounds(330, 10, 72, 23);
 
         btnScelta2.setText("jButton3");
+        btnScelta2.addActionListener(this::btnScelta2ActionPerformed);
         getContentPane().add(btnScelta2);
         btnScelta2.setBounds(290, 260, 75, 23);
 
         btnScelta.setText("jButton1");
+        btnScelta.addActionListener(this::btnSceltaActionPerformed);
         getContentPane().add(btnScelta);
         btnScelta.setBounds(10, 260, 75, 23);
 
         btnScelta1.setText("jButton2");
+        btnScelta1.addActionListener(this::btnScelta1ActionPerformed);
         getContentPane().add(btnScelta1);
         btnScelta1.setBounds(150, 260, 75, 23);
 
@@ -84,6 +120,28 @@ public class GraficaGDR extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSceltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSceltaActionPerformed
+        int destinazione = motore.getScenaAttuale().getOpzioni().get(0).idDestinazione;
+        motore.vaiAllaScena(destinazione);
+        aggiornaInterfaccia();
+    }//GEN-LAST:event_btnSceltaActionPerformed
+
+    private void btnScelta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnScelta1ActionPerformed
+        int destinazione = motore.getScenaAttuale().getOpzioni().get(1).idDestinazione;
+        motore.vaiAllaScena(destinazione);
+        aggiornaInterfaccia();
+    }//GEN-LAST:event_btnScelta1ActionPerformed
+
+    private void btnScelta2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnScelta2ActionPerformed
+        int destinazione = motore.getScenaAttuale().getOpzioni().get(2).idDestinazione;
+        motore.vaiAllaScena(destinazione);
+        aggiornaInterfaccia();
+    }//GEN-LAST:event_btnScelta2ActionPerformed
+
+    private void btnSalvataggioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvataggioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSalvataggioActionPerformed
 
     /**
      * @param args the command line arguments

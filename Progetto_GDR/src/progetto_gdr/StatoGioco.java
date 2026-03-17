@@ -13,7 +13,7 @@ import java.util.List;
  * @author grott
  */
 public class StatoGioco implements Serializable {
-    private static final long serialVersionUID = 1L; // Identificatore per la serializzazione
+    private static final long serialVersionUID = 1L;
     
     public String nomeGiocatore;
     public int hp;

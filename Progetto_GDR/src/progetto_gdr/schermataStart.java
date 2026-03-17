@@ -45,6 +45,11 @@ public class schermataStart extends javax.swing.JFrame {
         btnIstruzioni.setBounds(317, 28, 75, 23);
 
         btnStart.setText("jButton1");
+        btnStart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnStartActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnStart);
         btnStart.setBounds(106, 230, 176, 51);
 
@@ -59,25 +64,31 @@ public class schermataStart extends javax.swing.JFrame {
         String messaggio = "BENVENUTO, VIANDANTE DEL DESTINO\n\n"
             + "Il mondo che stai per calcare non risponde alla forza bruta, \n"
             + "ma all'eco delle tue scelte.\n\n"
-            + "📖 ASCOLTA LE OMBRE\n"
+            + " ASCOLTA LE OMBRE\n"
             + "Ogni luogo ha una storia. Leggi attentamente i racconti: \n"
             + "tra le righe si nascondono indizi per la tua sopravvivenza.\n\n"
-            + "⚖️ IL PESO DELL'ANIMA (KARMA)\n"
+            + "️ IL PESO DELL'ANIMA (KARMA)\n"
             + "Qui non troverai spade o archi. La tua unica arma è la parola.\n"
             + "Ogni tua azione muterà il tuo Karma: sarai un faro di speranza \n"
             + "o un'ombra nel buio? Ricorda: il mondo cambierà con te.\n\n"
-            + "🌀 TRAME DIVERGENTI\n"
+            + " TRAME DIVERGENTI\n"
             + "Non esiste un unico sentiero. Le tue decisioni plasmeranno \n"
             + "nuove scene e apriranno varchi verso finali che solo tu \n"
             + "potrai scoprire... o causare.\n\n"
-            + "🕯️ MEMORIA ETERNA\n"
+            + "️ MEMORIA ETERNA\n"
             + "Se senti che il destino ti sta sfuggendo di mano, usa il potere\n"
-            + "del Salvataggio. Il file '.ser' custodirà la tua essenza \n"
+            + "del Salvataggio. Un essenza magica custodirà la tua essenza \n"
             + "permettendoti di sfidare il tempo stesso.\n\n"
             + "Che la tua storia valga la pena di essere raccontata.";
 
 javax.swing.JOptionPane.showMessageDialog(this, messaggio, "Cronache del Destino", javax.swing.JOptionPane.PLAIN_MESSAGE);
     }//GEN-LAST:event_btnIstruzioniActionPerformed
+
+    private void btnStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStartActionPerformed
+        GraficaGDR gdr = new GraficaGDR(); 
+        gdr.setVisible(true);              
+        this.dispose();
+    }//GEN-LAST:event_btnStartActionPerformed
 
     /**
      * @param args the command line arguments

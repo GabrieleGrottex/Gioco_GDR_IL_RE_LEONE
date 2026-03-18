@@ -68,6 +68,9 @@ public class GraficaGDR extends javax.swing.JFrame {
         btnScelta1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtRacconto = new javax.swing.JTextArea();
+        personaggio1 = new javax.swing.JLabel();
+        personaggio2 = new javax.swing.JLabel();
+        personaggio3 = new javax.swing.JLabel();
         Sfondo = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -113,6 +116,18 @@ public class GraficaGDR extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(0, 190, 400, 50);
+
+        personaggio1.setText("jLabel2");
+        getContentPane().add(personaggio1);
+        personaggio1.setBounds(40, 140, 37, 16);
+
+        personaggio2.setText("jLabel3");
+        getContentPane().add(personaggio2);
+        personaggio2.setBounds(170, 140, 37, 16);
+
+        personaggio3.setText("jLabel4");
+        getContentPane().add(personaggio3);
+        personaggio3.setBounds(310, 140, 37, 16);
 
         Sfondo.setText("jLabel2");
         getContentPane().add(Sfondo);
@@ -177,6 +192,9 @@ public class GraficaGDR extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel personaggio1;
+    private javax.swing.JLabel personaggio2;
+    private javax.swing.JLabel personaggio3;
     private javax.swing.JTextArea txtRacconto;
     // End of variables declaration//GEN-END:variables
 }

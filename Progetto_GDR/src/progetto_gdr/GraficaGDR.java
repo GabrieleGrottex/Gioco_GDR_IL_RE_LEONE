@@ -92,22 +92,22 @@ public class GraficaGDR extends javax.swing.JFrame {
         btnSalvataggio.setText("Button4");
         btnSalvataggio.addActionListener(this::btnSalvataggioActionPerformed);
         getContentPane().add(btnSalvataggio);
-        btnSalvataggio.setBounds(330, 10, 72, 23);
+        btnSalvataggio.setBounds(870, 10, 72, 23);
 
         btnScelta2.setText("jButton3");
         btnScelta2.addActionListener(this::btnScelta2ActionPerformed);
         getContentPane().add(btnScelta2);
-        btnScelta2.setBounds(290, 260, 75, 23);
+        btnScelta2.setBounds(675, 423, 260, 90);
 
         btnScelta.setText("jButton1");
         btnScelta.addActionListener(this::btnSceltaActionPerformed);
         getContentPane().add(btnScelta);
-        btnScelta.setBounds(10, 260, 75, 23);
+        btnScelta.setBounds(20, 420, 270, 90);
 
         btnScelta1.setText("jButton2");
         btnScelta1.addActionListener(this::btnScelta1ActionPerformed);
         getContentPane().add(btnScelta1);
-        btnScelta1.setBounds(150, 260, 75, 23);
+        btnScelta1.setBounds(345, 423, 270, 90);
 
         txtRacconto.setColumns(20);
         txtRacconto.setLineWrap(true);
@@ -115,23 +115,23 @@ public class GraficaGDR extends javax.swing.JFrame {
         jScrollPane1.setViewportView(txtRacconto);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(0, 190, 400, 50);
+        jScrollPane1.setBounds(10, 320, 920, 90);
 
         personaggio1.setText("jLabel2");
         getContentPane().add(personaggio1);
-        personaggio1.setBounds(40, 140, 37, 16);
+        personaggio1.setBounds(50, 180, 210, 130);
 
         personaggio2.setText("jLabel3");
         getContentPane().add(personaggio2);
-        personaggio2.setBounds(170, 140, 37, 16);
+        personaggio2.setBounds(430, 170, 200, 120);
 
         personaggio3.setText("jLabel4");
         getContentPane().add(personaggio3);
-        personaggio3.setBounds(310, 140, 37, 16);
+        personaggio3.setBounds(770, 160, 150, 120);
 
         Sfondo.setText("jLabel2");
         getContentPane().add(Sfondo);
-        Sfondo.setBounds(0, 0, 420, 310);
+        Sfondo.setBounds(0, 0, 970, 520);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
